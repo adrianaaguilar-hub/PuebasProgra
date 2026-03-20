@@ -23,6 +23,17 @@ public class Cronometro {
         }
     }
 
+    public boolean esIgual(Cronometro otroTiempo) {
+        return segundos == otroTiempo.segundos && minutos == otroTiempo.minutos && horas == otroTiempo.horas;
+    }
+
+    public Cronometro sumar(Cronometro otroTiempo) {
+        int segundosSumados = segundos + otroTiempo.segundos;
+        int minutosSumados = minutos + otroTiempo.minutos;
+        int horasSumadas = horas + otroTiempo.horas;
+        return new Cronometro (segundosSumados, minutosSumados, horasSumadas);
+    }
+
     public String toString () {
 
         return String.format("%02d:%02d:%02d", horas, minutos, segundos);
