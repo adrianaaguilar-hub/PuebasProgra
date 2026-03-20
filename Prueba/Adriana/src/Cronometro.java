@@ -21,6 +21,10 @@ public class Cronometro {
             minutos = minutos%60;
             horas = horas + minutosTemporal/60;
         }
-    
+    }
+
+    public String toString () {
+
+        return String.format("%02d:%02d:%02d", horas, minutos, segundos);
     }
 }
